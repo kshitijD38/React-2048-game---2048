@@ -114,7 +114,7 @@ export default function Board({ GridSize }) {
       if (a === b) {
         row[i] = a + b;
         netScoreAdd += row[i];
-        row[i - 1] = 0;
+        row[i + 1] = 0;
       }
     }
     setScore(score + netScoreAdd);
