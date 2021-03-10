@@ -38,9 +38,10 @@ export default function Board({ GridSize }) {
     let gridCopy = [...grid];
 
     gridCopy = gridCopy.map((row) => {
-      let rowCopy = shift("right", row);
+      let rowCopy = [...row];
+      rowCopy = shift("right", [...rowCopy]);
       mergeRight(rowCopy);
-      rowCopy = shift("right", row);
+      rowCopy = shift("right", [...rowCopy]);
 
       return rowCopy;
     });
